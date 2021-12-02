@@ -33,22 +33,23 @@ img {
   border-radius: 20px;
   min-width: 300px;
   max-width: 425px;
-
   box-shadow: 0px 15px 30px -5px rgba(56, 41, 224, 0.2);
 }
 
 .card-body {
-  padding: 25px;
+  padding: 2.5rem;
 }
 
 .card-title {
+  font-size: 30px;
   font-weight: 900;
   color: hsl(223, 47%, 23%);
+  margin-top: 1rem;
 }
 
 .navbar {
   padding: 15px 15px 0px 15px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   border-radius: 10px;
 }
 
@@ -68,6 +69,7 @@ img {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 15px;
+  padding: 12px;
 }
 .order-cancel {
   font-size: 16px;
@@ -101,7 +103,7 @@ img {
     background: no-repeat url("../images/pattern-background-desktop.svg");
     background-color: hsl(225, 100%, 94%);
     background-position: top;
-    background-size: 100vw 60vh;
+    background-size: 100vw 55vh;
   }
   .container {
     display: flex;
@@ -109,5 +111,11 @@ img {
     align-items: center;
     text-align: center;
     min-height: 100vh;
+  }
+  .card-body {
+    padding: 40px;
+  }
+  .navbar {
+    padding: 15px 15px 0px 15px;
   }
 }
