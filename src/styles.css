@@ -25,11 +25,6 @@ img {
   padding-right: var(--bs-gutter-x, 1.25rem);
   padding-left: var(--bs-gutter-x, 1.25rem);
   padding-top: 50px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  min-height: 100vh; */
 }
 /* .order-summary {
 } */
@@ -105,5 +100,12 @@ img {
   body {
     background-position: top;
     background-size: 100vw 50vh;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
   }
 }
