@@ -98,8 +98,10 @@ img {
 
 @media (min-width: 1440px) {
   body {
+    background: no-repeat url("../images/pattern-background-desktop.svg");
+    background-color: hsl(225, 100%, 94%);
     background-position: top;
-    background-size: 100vw 50vh;
+    background-size: 100vw 60vh;
   }
   .container {
     display: flex;
