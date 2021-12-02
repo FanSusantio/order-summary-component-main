@@ -1,8 +1,7 @@
 body {
-  background: no-repeat url("../images/pattern-background-desktop.svg");
-  background-size: 100% 50%;
-  background-color: hsl(225, 100%, 94%);
   font-family: "Red Hat Display", sans-serif;
+  background: no-repeat url("../images/pattern-background-mobile.svg");
+  background-color: hsl(225, 100%, 94%);
 }
 
 p {
@@ -39,6 +38,8 @@ img {
   border-radius: 20px;
   min-width: 300px;
   max-width: 425px;
+
+  box-shadow: 0px 15px 30px -5px rgba(56, 41, 224, 0.2);
 }
 
 .card-body {
@@ -85,14 +86,14 @@ img {
   border-color: #3829e0;
   width: 100%;
   /* box-shadow: 3px 49px 43px 1px rgba(56,41,224,0.23); */
-  box-shadow: 0px 20px 15px 1px rgba(56, 41, 224, 0.2);
+  box-shadow: 0px 10px 20px 5px rgba(56, 41, 224, 0.2);
 }
 /*======= MEDIA QUERIES =======*/
 
 @media (min-width: 375px) {
   body {
-    background-image: url("../images/pattern-background-mobile.svg");
-    background-position: center -60px;
+    background-position: top;
+    background-size: contain;
   }
 
   .navbar {
@@ -100,9 +101,9 @@ img {
   }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1440px) {
   body {
     background-position: top;
-    background-size: 100% 50%;
+    background-size: 100vw 50vh;
   }
 }
