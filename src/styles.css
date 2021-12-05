@@ -1,86 +1,116 @@
-body {
-  font-family: "Red Hat Display", sans-serif;
-  background: no-repeat url("../images/pattern-background-mobile.svg");
-  background-color: hsl(225, 100%, 94%);
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
 }
 
-p {
-  font-size: 16px;
-  color: hsl(224, 23%, 55%);
-  padding: 1rem 1rem;
-}
-
-ul {
-  list-style: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
   padding: 0;
 }
 
-img {
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background: no-repeat url("../images/pattern-background-mobile.svg");
+  background-color: var(--pale-blue);
+}
+
+/*======= CARD STYLES =======*/
+.container {
+  margin: 0 auto;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 70px;
+}
+
+.card {
+  margin: 0 auto;
+  width: 90%;
+  min-width: 300px;
+  max-width: 450px;
+
+  border-radius: 20px;
+  box-shadow: 0px 15px 30px -5px hsla(245, 75%, 52%, 0.2);
+}
+
+.illustration {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
-.container {
-  margin: auto;
-  padding-right: var(--bs-gutter-x, 1.25rem);
-  padding-left: var(--bs-gutter-x, 1.25rem);
-  padding-top: 50px;
-}
-/* .order-summary {
-} */
-.card {
-  margin: auto;
-  border-radius: 20px;
-  min-width: 300px;
-  max-width: 425px;
-  box-shadow: 0px 15px 30px -5px rgba(56, 41, 224, 0.2);
-}
-
 .card-body {
-  padding: 2.5rem;
+  padding: 1.5rem;
 }
 
 .card-title {
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 900;
-  color: hsl(223, 47%, 23%);
-  margin-top: 1rem;
+  color: var(--dark-blue);
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.card-text {
+  font-size: 15px;
+  color: var(--desaturated-blue);
+  padding: 1rem 1rem;
+  line-height: 1.6;
 }
 
 .navbar {
   padding: 15px 15px 0px 15px;
   margin-bottom: 20px;
   border-radius: 10px;
+
+  font-weight: 900;
+  font-size: 14px;
 }
 
 .plan-heading {
-  font-weight: 900;
-  color: hsl(223, 47%, 23%);
+  color: var(--dark-blue);
+}
+
+.plan {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
 }
 .plan-price {
-  color: hsl(224, 23%, 55%);
+  color: var(--desaturated-blue);
+  font-weight: 500;
 }
 .plan-change {
-  color: #3829e0;
-  font-weight: 900;
+  color: var(--bright-blue);
+  margin-bottom: 0;
+}
+
+.order-cancel,
+.order-payment {
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .order-payment {
-  font-size: 16px;
-  font-weight: 700;
+  margin-top: 5px;
   margin-bottom: 15px;
   padding: 12px;
 }
 .order-cancel {
-  font-size: 16px;
-  font-weight: 700;
-  color: hsl(224, 23%, 55%);
+  color: var(--desaturated-blue);
 }
 
 .btn-primary {
-  background-color: hsl(245, 75%, 52%);
+  background-color: var(--bright-blue);
   border-radius: 10px;
-  border-color: #3829e0;
+  border-color: transparent;
   width: 100%;
   /* box-shadow: 3px 49px 43px 1px rgba(56,41,224,0.23); */
   box-shadow: 0px 10px 20px 5px rgba(56, 41, 224, 0.2);
@@ -94,7 +124,7 @@ img {
   }
 
   .navbar {
-    padding: 0.5em 1em;
+    padding: 1em 1em;
   }
 }
 
@@ -103,7 +133,7 @@ img {
     background: no-repeat url("../images/pattern-background-desktop.svg");
     background-color: hsl(225, 100%, 94%);
     background-position: top;
-    background-size: 100vw 55vh;
+    background-size: 100vw;
   }
   .container {
     display: flex;
@@ -111,11 +141,34 @@ img {
     align-items: center;
     text-align: center;
     min-height: 100vh;
+    padding-top: 0px;
   }
+
+  .card {
+    margin: 0 auto;
+    width: 90%;
+    min-width: 450px;
+
+    border-radius: 20px;
+    box-shadow: 0px 15px 30px -5px hsla(245, 75%, 52%, 0.2);
+  }
+  .card-title {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--dark-blue);
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
   .card-body {
-    padding: 40px;
+    padding: 45px;
   }
   .navbar {
-    padding: 15px 15px 0px 15px;
+    font-size: 16px;
+  }
+
+  .card-text {
+    margin-bottom: 0px;
+    font-size: 16px;
   }
 }
